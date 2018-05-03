@@ -7,14 +7,9 @@
     tools:context="com.piyush.imagesearch.ux.ImageActivity">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/preview_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:transitionName="simple_activity_transition" />
-
-    <ImageView
-        android:id="@+id/preview_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 </FrameLayout>

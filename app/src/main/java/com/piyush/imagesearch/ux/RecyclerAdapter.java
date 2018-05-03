@@ -15,6 +15,8 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.piyush.imagesearch.R;
 import com.piyush.imagesearch.dataObj.ImageObj;
 
@@ -50,6 +52,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.adapte
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.ic_placeholder)
                 .into(holder.image);
+//        .into(new SimpleTarget<Bitmap>(300,300) {
+//            @Override
+//            public void onResourceReady(Bitmap resource, GlideAnimation glideAnimation) {
+//                setBackgroundImage(resource);
+//            }
+//        });
 
 
         holder.image.setOnClickListener(new View.OnClickListener() {

@@ -28,6 +28,7 @@ public class ImageActivity extends AppCompatActivity {
 
         Glide.with(this)
                 .load(getIntent().getStringExtra("preview_image"))
+                .asBitmap()
                 .placeholder(preview_image.getDrawable())
                 .into(preview_image);
 
