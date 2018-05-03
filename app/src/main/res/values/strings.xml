@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Image Search</string>
+
+    <!-- Menu file -->
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+
+    <!-- Activity -->
+    <string name="edittext_hint">Search</string>
+    <string name="search_info_text">Search Images</string>
+    <string name="no_internet_info_text">No Internet Connection</string>
+    <string name="info">Enter Keyword to search</string>
+
+    <!-- Error Messages -->
+    <string name="search_limit">Daily Limit Reached</string>
+    <string name="something_went_wrong">Something went wrong</string>
+</resources>

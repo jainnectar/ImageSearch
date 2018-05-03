@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    tools:context="com.piyush.imagesearch.ux.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/search_keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:gravity="center|left"
+                android:hint="@string/edittext_hint"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_layout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_up_arrow"
+            android:rotation="-20"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info"
+            android:textColor="@color/grey"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_text"
+            android:text="@string/search_info_text"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/image_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:theme="@style/ProgressBar"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>
